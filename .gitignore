@@ -1,0 +1,13 @@
+
+/*/.gitignore
+/*/*/.gitignore
+
+###> IDEs
+/.idea
+/.vscode/*
+###< IDEs
+
+__pycache__
+venv
+.history
+logs
