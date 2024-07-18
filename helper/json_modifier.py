@@ -1,5 +1,4 @@
 import os
-import json
 import shutil
 
 def replace_json_file(file_path, new_file_path):

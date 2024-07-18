@@ -3,11 +3,11 @@
     {
       "tag": "salutation",
       "patterns": {
-        "fr": ["bonjour", "salut", "bonsoir", "coucou", "Bonne journée", "Bonne soirée"],
+        "fr": ["bonjour", "salut", "bonsoir", "coucou", "Bonne journée", "Bonne soirée","bnjr","cc"],
         "en": ["Hello", "Hi", "Good evening", "Good morning", "Hey", "Good day", "Good night"]
       },
       "responses": {
-        "fr": ["bonjour ! Comment puis-je vous aider aujourd'hui ?", "Salut ! Comment puis-je vous aider ?", "Bonsoir ! Que puis-je faire pour vous ?", "Coucou ! Que puis-je faire pour vous ?", "Hey ! Comment puis-je vous aider ?", "Bonne journée ! Comment puis-je vous aider ?", "Bonne soirée ! Que puis-je faire pour vous ?"],
+        "fr": ["bonjour ! Comment puis-je vous aider aujourd'hui ?", "Salut ! Comment puis-je vous aider ?", "Coucou ! Que puis-je faire pour vous ?", "Hey ! Comment puis-je vous aider ?", "Bonne journée ! Comment puis-je vous aider ?"],
         "en": ["Hello! How can I assist you today?", "Hi! How can I help you?", "Good evening! What can I do for you?", "Hello! How can I assist you?", "Hey! How can I help you?", "Good day! How can I assist you?", "Good night! What can I do for you?"]
       },
       "context_set": ""
@@ -15,11 +15,11 @@
     {
       "tag": "au revoir",
       "patterns": {
-        "fr": ["Au revoir", "Adieu", "À bientôt", "À plus tard", "Bonne journée", "Bonne soirée", "À la prochaine"],
+        "fr": ["Au revoir", "Adieu", "À bientôt", "À plus tard", "À la prochaine"],
         "en": ["Goodbye", "Farewell", "See you soon", "See you later", "Have a nice day", "Good night", "Until next time"]
       },
       "responses": {
-        "fr": ["Au revoir ! Passez une bonne journée.", "Adieu ! À bientôt.", "À bientôt ! Prenez soin de vous.", "À plus tard !", "Salut ! À la prochaine.", "Bonne journée !", "Bonne soirée !", "À la prochaine !"],
+        "fr": ["Au revoir ! Passez une bonne journée.", "Adieu ! À bientôt.", "À bientôt ! Prenez soin de vous.", "À plus tard !", "Bonne journée !", "Bonne soirée !", "À la prochaine !"],
         "en": ["Goodbye! Have a nice day.", "Farewell! See you soon.", "See you soon! Take care.", "See you later!", "Bye! Until next time.", "Have a nice day!", "Good night!", "Until next time!"]
       },
       "context_set": ""
@@ -124,20 +124,22 @@
                 ]
       },
       "context_set": ""
-    },
-    {
-      "tag": "validation facture",
+    },{
+      "tag": "merci",
       "patterns": {
-          "fr": ["valider facture", "approuver facture", "confirmer facture"],
-          "en": ["validate invoice", "approve invoice", "confirm invoice"]
+        "fr": ["merci", "je vous remercie", "thanks", "thank you"]
       },
       "responses": {
-          "fr": [
-              "\nPour valider une facture :\nÉtape 1 : Connectez-vous au logiciel de gestion commerciale.\nÉtape 2 : Accédez à l'onglet 'Factures'.\nÉtape 3 : Recherchez et sélectionnez la facture à valider.\nÉtape 4 : Vérifiez les détails de la facture.\nÉtape 5 : Cliquez sur le bouton 'Valider' ou 'Approuver'.\nÉtape 6 : La facture sera validée et prête pour le paiement.\n"
-          ],
-          "en": [
-              "\nTo validate an invoice:\nStep 1: Log in to the commercial management software.\nStep 2: Go to the 'Invoices' tab.\nStep 3: Search and select the invoice to validate.\nStep 4: Review the invoice details.\nStep 5: Click the 'Validate' or 'Approve' button.\nStep 6: The invoice will be validated and ready for payment.\n"
-          ]
+        "fr": [
+          "De rien !",
+          "Je vous en prie.",
+          "Avec plaisir !"
+        ],
+        "en": [
+          "You're welcome!",
+          "No problem!",
+          "My pleasure!"
+        ]
       }
     }
   ]

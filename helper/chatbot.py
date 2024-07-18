@@ -30,7 +30,26 @@ def preprocess_text(text, language):
         tokens = [token.text for token in doc if not token.is_punct and not token.is_space and token.text not in fr_stop_words]
     
     return ' '.join(tokens)
+# Extract keywords from intents.json for custom spell checking
+def extract_keywords_from_intents(qa_data, lang):
+    keywords = []
+    for intent in qa_data['intents']:
+        if 'patterns' in intent and lang in intent['patterns']:
+            keywords.extend(intent['patterns'][lang])
+    return set(keywords)
 
+
+
+
+def custom_spell_checker(input_text, keywords, spell_checker):
+    words = input_text.split()
+    corrected_words = []
+    for word in words:
+        if word in keywords:
+            corrected_words.append(word)
+        else:
+            corrected_words.append(spell_checker.correction(word))
+    return ' '.join(corrected_words)
 # Find the closest question to the user input
 def get_closest_question(user_input, questions, language):
     best_similarity = 0.0
@@ -64,7 +83,7 @@ def split_message(message):
 def chatbot_logic(user_input, qa_data, language):
    
     message = user_input.lower()
-
+    print("message",message)
     # Split the message into parts
     parts = split_message(message)
 
@@ -98,5 +117,5 @@ def chatbot_logic(user_input, qa_data, language):
     
     # Concatenate all responses into a single string
     answer = ' '.join(responses)
-    
+    print("answer",answer)
     return answer
