@@ -35,21 +35,4 @@ AI/NLP: PyTorch, Scikit-learn, custom intent classifier
 Database: JSON / SQLite (extendable)
 
 Frontend (optional): Angular 17
-🛠️ Installation & Setup
 
-Clone the repository:
-
-git clone https://github.com/nourchenerm/chatbot.git
-cd chatbot
-
-
-Create a virtual environment and install dependencies:
-
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-
-
-Run the FastAPI server:
-
-uvicorn main:app --reload
